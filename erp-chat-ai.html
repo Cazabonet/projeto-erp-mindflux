@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Chat AI - Estoca.AI</title>
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/erp-chat-ai.css">
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Container principal -->
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Estoca.AI Logo">
+            </div>
+            
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="theme-toggle-checkbox">
+                    <label for="theme-toggle-checkbox"></label>
+                </div>
+                <i class="fas fa-moon"></i>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-box"></i>
+                            <span>Estoque</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Vendas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Clientes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-truck"></i>
+                            <span>Fornecedores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Relatórios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="img/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="user-details">
+                    <h4>João Silva</h4>
+                    <p>Administrador</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conteúdo principal -->
+        <div class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Pesquisar...">
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="messages">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge">5</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <p>Bem-vindo ao sistema ERP Estoca.AI</p>
+                </div>
+                
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <div class="card-icon blue">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Vendas Hoje</h3>
+                            <p class="card-value">R$ 45.230,50</p>
+                            <p class="card-change positive">+12,4% <span>vs ontem</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon green">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Produtos</h3>
+                            <p class="card-value">1.247</p>
+                            <p class="card-change">23 <span>em falta</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon purple">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Clientes</h3>
+                            <p class="card-value">2.847</p>
+                            <p class="card-change positive">+156 <span>este mês</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon orange">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="card-info">
+                            <h3>Receita Mensal</h3>
+                            <p class="card-value">R$ 1.245.890,00</p>
+                            <p class="card-change positive">+8,7% <span>vs mês anterior</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-charts">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Vendas por Categoria</h3>
+                            <div class="chart-actions">
+                                <button class="btn-outline">Exportar</button>
+                                <div class="dropdown">
+                                    <button class="btn-icon">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Desempenho Mensal</h3>
+                            <div class="chart-actions">
+                                <button class="btn-outline">Exportar</button>
+                                <div class="dropdown">
+                                    <button class="btn-icon">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-tables">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Produtos Mais Vendidos</h3>
+                            <div class="table-actions">
+                                <button class="btn-outline">Ver Todos</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Categoria</th>
+                                        <th>Vendas</th>
+                                        <th>Estoque</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Smartphone XYZ Pro</td>
+                                        <td>Eletrônicos</td>
+                                        <td>342</td>
+                                        <td>156</td>
+                                        <td><span class="status success">Em estoque</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Notebook ABC Ultra</td>
+                                        <td>Eletrônicos</td>
+                                        <td>189</td>
+                                        <td>42</td>
+                                        <td><span class="status warning">Estoque baixo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fone de ouvido DEF Wireless</td>
+                                        <td>Eletrônicos</td>
+                                        <td>156</td>
+                                        <td>78</td>
+                                        <td><span class="status success">Em estoque</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Smart TV GHI 55"</td>
+                                        <td>Eletrônicos</td>
+                                        <td>98</td>
+                                        <td>23</td>
+                                        <td><span class="status warning">Estoque baixo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Relógio JKL Sport</td>
+                                        <td>Acessórios</td>
+                                        <td>87</td>
+                                        <td>0</td>
+                                        <td><span class="status danger">Em falta</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chat IA - Janela do Chat -->
+    <div id="erpChatWindow" class="erp-chat-window" data-theme="light">
+        <!-- Barra de título do chat -->
+        <div id="erpChatTitleBar" class="erp-chat-header">
+            <div class="erp-chat-title">
+                <i class="fas fa-robot"></i>
+                <span>Estoca.AI - Assistente Virtual</span>
+            </div>
+            <div class="erp-chat-controls">
+                <button class="minimize" onclick="minimizarERPChat()">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button class="maximize" onclick="maximizarERPChat()">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="close" onclick="fecharERPChat()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Corpo do chat -->
+        <div class="erp-chat-body">
+            <!-- Área de mensagens -->
+            <div id="erpChatMessages" class="erp-chat-messages">
+                <!-- Mensagem inicial do assistente -->
+                <div class="erp-chat-message ai-message">
+                    <div class="message-avatar ai">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            👋 Olá! Sou a IA do sistema ERP Estoca.AI. Como posso ajudar você hoje?
+                        </div>
+                        <div class="message-time">
+                            <!-- Hora atual será inserida via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Área de perguntas rápidas -->
+            <div class="erp-chat-quick-questions">
+                <button class="erp-chat-quick-btn" onclick="perguntaRapidaERP('Vendas de hoje')">Vendas de hoje</button>
+                <button class="erp-chat-quick-btn" onclick="perguntaRapidaERP('Status do estoque')">Status do estoque</button>
+                <button class="erp-chat-quick-btn" onclick="perguntaRapidaERP('Produtos mais vendidos')">Produtos mais vendidos</button>
+                <button class="erp-chat-quick-btn" onclick="perguntaRapidaERP('Análise financeira')">Análise financeira</button>
+                <button class="erp-chat-quick-btn" onclick="perguntaRapidaERP('Informações de clientes')">Informações de clientes</button>
+            </div>
+            
+            <!-- Área de input -->
+            <div class="erp-chat-input-area">
+                <div class="erp-chat-input-wrapper">
+                    <textarea id="erpChatInput" placeholder="Digite sua mensagem aqui..."></textarea>
+                </div>
+                <button class="erp-chat-send-btn" onclick="enviarERPMensagem()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botão flutuante para abrir o chat -->
+    <button id="erpChatBtn" onclick="abrirERPChat()">
+        <i class="fas fa-robot"></i>
+        <div class="erp-chat-notification">1</div>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/erp-chat-ai.js"></script>
+    
+    <!-- Script para inicializar os gráficos -->
+    <script>
+        // Configuração do gráfico de vendas por categoria
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Eletrônicos', 'Moda', 'Casa', 'Alimentos', 'Outros'],
+                datasets: [{
+                    data: [40, 25, 20, 10, 5],
+                    backgroundColor: ['#4a6cf7', '#6c757d', '#28a745', '#ffc107', '#dc3545'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            boxWidth: 15,
+                            padding: 15
+                        }
+                    }
+                },
+                cutout: '70%'
+            }
+        });
+        
+        // Configuração do gráfico de desempenho mensal
+        const perfCtx = document.getElementById('performanceChart').getContext('2d');
+        const perfChart = new Chart(perfCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    label: 'Vendas',
+                    data: [65, 59, 80, 81, 56, 90],
+                    borderColor: '#4a6cf7',
+                    backgroundColor: 'rgba(74, 108, 247, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Lucro',
+                    data: [28, 48, 40, 45, 35, 55],
+                    borderColor: '#28a745',
+                    backgroundColor: 'rgba(40, 167, 69, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            drawBorder: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Inicializar a hora atual na mensagem inicial
+        document.addEventListener('DOMContentLoaded', () => {
+            const messageTime = document.querySelector('.erp-chat-message .message-time');
+            if (messageTime) {
+                messageTime.textContent = new Date().toLocaleTimeString('pt-BR', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

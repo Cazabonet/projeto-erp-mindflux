@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Chat IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            min-height: 100vh;
+        }
+        
+        .chat-ai-fab {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            width: 60px !important;
+            height: 60px !important;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+            border: none !important;
+            border-radius: 50% !important;
+            color: white !important;
+            font-size: 24px !important;
+            cursor: pointer !important;
+            z-index: 9999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3) !important;
+            transition: transform 0.3s ease;
+        }
+        
+        .chat-ai-fab:hover {
+            transform: scale(1.1);
+        }
+        
+        .chat-ai-badge {
+            position: absolute !important;
+            top: -5px !important;
+            right: -5px !important;
+            background: #ef4444 !important;
+            color: white !important;
+            border-radius: 50% !important;
+            width: 20px !important;
+            height: 20px !important;
+            font-size: 12px !important;
+            font-weight: 600 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h1>🧪 Teste do Chat IA</h1>
+        <p>Este é um arquivo de teste para verificar se o botão do Chat IA aparece corretamente.</p>
+        <p><strong>Você deve ver:</strong></p>
+        <ul>
+            <li>Um botão azul redondo no canto inferior direito</li>
+            <li>Um badge vermelho com o número "1"</li>
+            <li>Ao clicar, deve aparecer um alerta</li>
+        </ul>
+        <p><strong>Se não aparecer:</strong> Há um problema com o CSS ou JavaScript</p>
+    </div>
+
+    <!-- Botão Flutuante do Chat IA -->
+    <button class="chat-ai-fab" id="chatAiFab" title="Abrir Chat IA">
+        <i class="fas fa-comments"></i>
+        <span class="chat-ai-badge" id="chatAiBadge">1</span>
+    </button>
+
+    <script>
+        console.log('🚀 Teste Chat IA iniciado');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM carregado');
+            
+            const chatBtn = document.getElementById('chatAiFab');
+            if (chatBtn) {
+                console.log('✅ Botão encontrado!');
+                console.log('Botão:', chatBtn);
+                console.log('Estilos computados:', window.getComputedStyle(chatBtn));
+                
+                chatBtn.addEventListener('click', function() {
+                    alert('🎉 Chat IA funcionando! O botão está visível e clicável.');
+                });
+            } else {
+                console.error('❌ Botão NÃO encontrado!');
+            }
+        });
+    </script>
+</body>
+</html>
